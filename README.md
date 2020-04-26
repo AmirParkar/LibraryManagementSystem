@@ -7,7 +7,7 @@ Scaffold-DbContext "Server=ServerName;Database=Library;Trusted_Connection=True;"
 A Console Application -> Library Application to keep a track of Books issued by Students
 		- BookName 
 		- BorrowedFromDate
-		- BorrowedToDate - Auto Calculatye + 7 Days
+		- BorrowedToDate - Auto Calculate + 7 Days
 		- IssuedBy 
 
 1. Insert Data 
