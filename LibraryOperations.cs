@@ -12,11 +12,16 @@ namespace LibraryManagementSystem
         {
             
             DateTime InputBorrowedFromDate = DateTime.Now;
-            DateTime InputBorrowedToDate = AlterDateForDays(7);
 
-            Console.WriteLine("Please enter the details");
+            Console.WriteLine("Please enter the details as requested");
+            Console.Write(" Enter Book Name ::");
             String InputBookName = Console.ReadLine();
+            Console.Write(" Book Issued By ::");
             String InputIssuedBy = Console.ReadLine();
+            Console.Write(" Require book for days? ::");
+            int RequireForDays = Convert.ToInt32(Console.ReadLine());
+
+            DateTime InputBorrowedToDate = AlterDateForDays(RequireForDays);
 
             using (var db = new LibraryContext())
             {

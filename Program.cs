@@ -56,8 +56,15 @@ namespace LibraryManagementSystem
                     }
                     ChooseOperation();
                     break;
+                case 3:
+                    Console.WriteLine("Update data is in progress");
+                    ChooseOperation();
+                    break;
+                case 4:
+                    ChooseOperation();
+                    break;
                 default:
-                    Console.WriteLine("There is no such option choose again");
+                    Console.WriteLine("Update data is in progress");
                     ChooseOperation();
                     break;
             }
