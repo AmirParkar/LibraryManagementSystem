@@ -161,8 +161,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Requirments.txt" />
-    <Content Include="DDL.sql" />
+    <Content Include="DBFiles\DDL.sql" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup Condition="$(VisualStudioVersion) == '16.0'">
