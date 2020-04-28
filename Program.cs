@@ -57,10 +57,16 @@ namespace LibraryManagementSystem
                     ChooseOperation();
                     break;
                 case 3:
-                    Console.WriteLine("Update data is in progress");
+                    Console.WriteLine("Delete data is in progress");
                     ChooseOperation();
                     break;
                 case 4:
+                    Console.WriteLine("Update data is in progress");
+                    var updateViewResult = LibraryOperations.UpdateData();
+                    if (updateViewResult)
+                    {
+                        Console.WriteLine("View Data Successfull");
+                    }
                     ChooseOperation();
                     break;
                 default:

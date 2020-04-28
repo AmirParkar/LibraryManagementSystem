@@ -66,6 +66,24 @@ namespace LibraryManagementSystem
 
         public static Boolean UpdateData()
         {
+            DateTime InputBorrowedFromDate = DateTime.Now;
+
+            Console.WriteLine("Please enter the details as requested");
+            Console.Write(" Enter Issuer Name  ::");
+            String InputIssuerName = Console.ReadLine();
+            Console.Write(" Updating end date ::");
+            String InputIssuedBy = Console.ReadLine();
+
+            using (var db = new LibraryContext())
+            {
+                Console.WriteLine(" Updating Details for Issuer Name ::" + InputIssuerName);
+                BorrowerDetails B = db.BorrowerDetails.First(x => x.IssuedBy == InputIssuerName);
+                B.BookName = "Three Idiots";
+                db.BorrowerDetails.Update(B);
+                db.SaveChanges();
+                Console.WriteLine("Book details modified");
+            }
+
             return true;
         }
 
